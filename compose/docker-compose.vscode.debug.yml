@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  web:
+    build:
+      dockerfile: ../Website/Dockerfile.vscode.debug
+    volumes: 
+      - ../Website/bin/pub/:/app

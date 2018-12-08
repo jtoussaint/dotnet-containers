@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "publish",
+            "type": "shell",
+            "args": [
+                "publish", "${workspaceRoot}/dotnet-containers.sln", "-c", "Debug", "-o", "bin/pub"
+            ],
+            "command": "dotnet",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$msCompile"
+        }       
+    ]
+}

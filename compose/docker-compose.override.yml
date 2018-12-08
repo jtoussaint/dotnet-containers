@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  web:
+    image: web:debug
+    build:
+      dockerfile: ../Website/Dockerfile.vs.debug
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - BASE_PATH=/app
+    ports:
+      - "5002:80"
