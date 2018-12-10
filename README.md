@@ -6,7 +6,7 @@ An example showing how to setup a cross platform development with dotnet core.  
 * VisualStudio for mac
 * VisualStudio for windows
 
-More information about how this is setup can be found here:   https://engineering.icfolson.com/2018/12/10/cross-platform-d…-and-dotnet-core/
+More information about how this is setup can be found here:   https://engineering.icfolson.com/2018/12/10/cross-platform-development-with-docker-and-dotnet-core/
 
 ##  Visual Studio
 At this point you can simply open up the solution file in Visual Studio (mac or windows) and press the debug button.  You do need to have docker installed and configured with linux container support.
