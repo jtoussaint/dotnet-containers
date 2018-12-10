@@ -1,8 +1,8 @@
-FROM microsoft/dotnet:2.1.1-aspnetcore-runtime-alpine3.7 AS base
+FROM microsoft/dotnet:2.1.4-aspnetcore-runtime-alpine3.7 AS base
 WORKDIR /app
 EXPOSE 80
 
-FROM microsoft/dotnet:2.1.301-sdk-alpine3.7 AS build
+FROM microsoft/dotnet:2.1.401-sdk-alpine3.7 AS build
 WORKDIR /src
 COPY . .
 

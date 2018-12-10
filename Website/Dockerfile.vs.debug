@@ -1,13 +1,15 @@
-FROM microsoft/dotnet:2.1.1-aspnetcore-runtime AS base
+FROM microsoft/dotnet:2.1.4-aspnetcore-runtime AS base
 WORKDIR /app
 EXPOSE 80
 
-FROM microsoft/dotnet:2.1.301-sdk AS build
+FROM microsoft/dotnet:2.1.401-sdk AS build
 WORKDIR /src
-COPY Website/Website.csproj Website/
-RUN dotnet restore Website/Website.csproj
 COPY . .
+
+RUN dotnet restore Website/Website.csproj
+
 WORKDIR /src/Website
+
 RUN dotnet build Website.csproj -c Release -o /app
 
 FROM build AS publish
@@ -16,4 +18,5 @@ RUN dotnet publish Website.csproj -c Release -o /app
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
+
 ENTRYPOINT ["dotnet", "Website.dll"]
