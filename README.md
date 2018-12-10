@@ -1,6 +1,6 @@
 # dotnet-containers
 
-An example showing how to setup a cross platform development with dotnet core.  This project can be run and debugged in :
+An example showing how to setup a cross platform development with dotnet core.  This project can be run and debugged in:
 
 * VSCode for mac / windows (linux should work as well)
 * VisualStudio for mac
